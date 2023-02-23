@@ -12,7 +12,7 @@ In this exercise, I pretended that I was scheduling a trip to Hawaii and in prep
 In this section, I used Python and SQLAlchemy to do basic climate analysis and data exploration of the climate database. Specifically, I used SQLAlchemy ORM queries, Pandas, and Matplotlib.
 * Precipitation Analysis
    - Found the most recent date in the dataset 
-   - Using that date, get the previous 12 months of precipitation data by querying the previous 12 months of data
+   - Using that date, got the previous 12 months of precipitation data by querying the previous 12 months of data
    - Selected only the "date" and "prcp" values
    - Loaded the query results into a Pandas DataFrame, and set the index to the "date" column
    - Sorted the DataFrame values by "date"
@@ -25,10 +25,22 @@ In this section, I used Python and SQLAlchemy to do basic climate analysis and d
    - Plotted the results --> Image: 12_mos_USC00519281.png
    
 ## Part 2: Design a Climate App
-In this section, I designed a Flask API  based on the previous queries.
+In this section, I designed a Flask API based on the previous queries. 
 
-STILL WORKING ON THIS SECTION
-   
+Included are:
+* Precipitation Route
+   - Shows the preceiptation data for the last year in the database
+   - Returns json with the date as the key and value as the precipitation
+* Stations Route
+   - Shows a list of all weather stations in database
+   - Returns jsonified data 
+* Tobs Route
+   - Shows the last year of data for the most active station
+   - Returns jsonified data 
+* Dynamic Routes Allowing User to Enter Start and/or End Dates
+   - Allows user to enter their own start date to see minimum, average and maximum temperatures after that date
+   - Allows user to enter their own start and end date to see minimum, average and maximum temperatures between those dates
+
 
 ## Support
 I attended class, attended a tutoring session, watched class recordings and reviewed my notes for the support needed for this challenge assignment.
@@ -36,11 +48,10 @@ I attended class, attended a tutoring session, watched class recordings and revi
 ## Submission Includes
 #### Part 1: Analyze and Explore the Climate Data:
 * climate_LJordan.ipynb
-* Image: daily_precipitation_plot.png
-* Image: 12_mos_USC00519281.png
+* Images Folder includes the graph image exports from the Jupyter Notebook
 #### Part 2: Design a Climate App:
 * app.py
-* ANYTHING ELSE??
+* Climate App Screenshots Folder includes screenshots of landing page and each route a user can do
 #### Resources Folder:
 * hawaii.sqlite
 * hawaii_measurements.csv
